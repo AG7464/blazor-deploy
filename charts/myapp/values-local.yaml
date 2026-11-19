@@ -1,0 +1,11 @@
+image:
+  pullPolicy: Always
+
+imagePullSecrets:
+  - ecr-pull-secret
+
+ingress:
+  className: traefik
+  host: blazor.local
+  annotations: null 
+

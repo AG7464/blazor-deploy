@@ -1,0 +1,29 @@
+replicaCount: 1
+
+image:
+  repository: 106940013558.dkr.ecr.ap-south-1.amazonaws.com/blazor-app
+  tag: v1
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+ 
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  className: alb
+  host: ""
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-path: /
+
+resources:
+  requests:
+    cpu: 256m
+    memory: 512Mi
+  limits:
+    cpu: 256m
+    memory: 512Mi
+
