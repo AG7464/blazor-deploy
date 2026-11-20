@@ -8,7 +8,7 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   selector:
-    app: myapp
+    app: blazor-app
   ports:
     - protocol: TCP
       port: {{ .Values.service.port }}

@@ -4,16 +4,16 @@ metadata:
   name: blazor-app
   namespace: blazor-ns
   labels:
-    app: myapp
+    app: blazor-app
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: myapp
+      app: blazor-app
   template:
     metadata:
       labels:
-        app: myapp
+        app: blazor-app
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

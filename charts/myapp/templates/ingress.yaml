@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: myapp
+  name: blazor-app
   namespace: blazor-ns
   {{- with .Values.ingress.annotations }}
   annotations:
